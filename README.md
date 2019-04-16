@@ -14,14 +14,17 @@ PHP: >=7.1
 $ composer require rockbuzz/lara-custom-validation
 ```
 
-## Rules
+## Add messages in resources/lang/pt-br/validation.php
 ```php
-cnpj: O campo :attribute não é um CNPJ válido;
-cpf: O campo :attribute não é um CPF válido;
-full_name: O campo :attribute não contém um nome completo;
-have_numbers: O campo :attribute não contém números;
-have_special_characters: O campo :attribute não contém caracteres especiais. ex.: @ # $ % & - ? !;
-slug: O campo :attribute não contém um formato de URI.
+return [
+    //
+    'cnpj' => 'O campo :attribute não contém um CNPJ válido',
+    'cpf' => 'O campo :attribute não contém um CPF válido',
+    'full_name' => 'O campo :attribute não contém um nome completo',
+    'have_numbers' => 'O campo :attribute não contém números',
+    'have_special_characters' => 'O campo :attribute não contém caracteres especiais. ex.: @ # $ % & - ? !',
+    'slug' => 'O campo :attribute não contém um formato de URI',
+];
 ```
 
 ## License

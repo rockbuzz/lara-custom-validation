@@ -14,10 +14,6 @@ class ServiceProvider extends SupportServiceProvider
         \Validator::extend('have_numbers', '\Rockbuzz\LaraCustomValidation\Rules\HaveNumbers@passes');
         \Validator::extend('have_special_characters', '\Rockbuzz\LaraCustomValidation\Rules\HaveSpecialCharacters@passes');
         \Validator::extend('slug', '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes');
-
-        $this->publishes([
-            __DIR__.'/config/messages.php' => resource_path('views/lang/pt-br/validation.php'),
-        ], 'messages');
     }
 
     public function register()

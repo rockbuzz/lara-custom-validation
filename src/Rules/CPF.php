@@ -18,7 +18,7 @@ class CPF implements Rule
 
     public function message()
     {
-        return '';
+        return 'O campo :attribute não contém um CPF válido';
     }
 
     private function isValid($value): bool
