@@ -8,14 +8,12 @@ class ServiceProvider extends SupportServiceProvider
 {
     public function boot()
     {
-        $me = $this;
-        $this->app['validator']->resolver(
-            function ($translator, $data, $rules, $messages, $customAttributes) use($me) {
-
-            $messages += config('custom-validation.messages');
-
-            return new \Validator($translator, $data, $rules, $messages, $customAttributes);
-        });
+        \Validator::extend('cnpj', '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes');
+        \Validator::extend('cpf', '\Rockbuzz\LaraCustomValidation\Rules\CPF@passes');
+        \Validator::extend('full_name', '\Rockbuzz\LaraCustomValidation\Rules\FullName@passes');
+        \Validator::extend('have_numbers', '\Rockbuzz\LaraCustomValidation\Rules\HaveNumbers@passes');
+        \Validator::extend('have_special_characters', '\Rockbuzz\LaraCustomValidation\Rules\HaveSpecialCharacters@passes');
+        \Validator::extend('slug', '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes');
 
         $this->publishes([
             __DIR__ . '/config/custom-validation.php' => config_path('custom-validation.php')
