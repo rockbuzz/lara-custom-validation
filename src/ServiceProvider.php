@@ -3,7 +3,6 @@
 namespace Rockbuzz\LaraCustomValidation;
 
 use Illuminate\Support\ServiceProvider as SupportServiceProvider;
-use Illuminate\Validation\Validator;
 
 class ServiceProvider extends SupportServiceProvider
 {
@@ -15,7 +14,7 @@ class ServiceProvider extends SupportServiceProvider
 
             $messages += config('custom-validation.messages');
 
-            return new Validator($translator, $data, $rules, $messages, $customAttributes);
+            return new \Validator($translator, $data, $rules, $messages, $customAttributes);
         });
 
         $this->publishes([
