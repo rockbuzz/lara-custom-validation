@@ -14,9 +14,9 @@ class CNPJ implements Rule
         return $this->isValid($value);
     }
 
-    public function message(): string
+    public function message()
     {
-        return config('custom-validation.messages.cnpj');
+        return '';
     }
 
     private function isValid($value): bool

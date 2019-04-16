@@ -39,7 +39,7 @@ class HaveNumbersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém números',
+            '',
             $this->haveNumbers()->message()
         );
     }

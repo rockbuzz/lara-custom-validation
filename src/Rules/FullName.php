@@ -23,8 +23,8 @@ class FullName implements Rule
         return true;
     }
 
-    public function message(): string
+    public function message()
     {
-        return config('custom-validation.messages.full_name');
+        return '';
     }
 }

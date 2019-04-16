@@ -15,8 +15,8 @@ class HaveNumbers implements Rule
         return !! preg_match('~[0-9]~', $value);
     }
 
-    public function message(): string
+    public function message()
     {
-        return config('custom-validation.messages.have_numbers');
+        return '';
     }
 }

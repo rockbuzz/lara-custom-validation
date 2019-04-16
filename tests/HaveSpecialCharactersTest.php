@@ -48,7 +48,7 @@ class HaveSpecialCharactersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém caracteres especiais. ex.: @ # $ % & - ? !',
+            '',
             $this->specialCharacters()->message()
         );
     }

@@ -15,8 +15,8 @@ class HaveSpecialCharacters implements Rule
         return !! preg_match('/[^a-zA-Z\d]/', $value);
     }
 
-    public function message(): string
+    public function message()
     {
-        return config('custom-validation.messages.have_special_characters');
+        return '';
     }
 }

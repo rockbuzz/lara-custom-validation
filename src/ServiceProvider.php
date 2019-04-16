@@ -16,12 +16,12 @@ class ServiceProvider extends SupportServiceProvider
         \Validator::extend('slug', '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes');
 
         $this->publishes([
-            __DIR__ . '/config/custom-validation.php' => config_path('custom-validation.php')
-        ], 'config');
+            __DIR__.'/config/messages.php' => resource_path('views/lang/pt-br/validation.php'),
+        ], 'messages');
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/config/custom-validation.php', 'custom-validation');
+        //
     }
 }

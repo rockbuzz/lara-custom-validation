@@ -16,9 +16,9 @@ class CPF implements Rule
         return $this->isValid($value);
     }
 
-    public function message(): string
+    public function message()
     {
-        return config('custom-validation.messages.cpf');
+        return '';
     }
 
     private function isValid($value): bool
