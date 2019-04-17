@@ -12,6 +12,7 @@ class ServiceProvider extends SupportServiceProvider
         \Validator::extend('cpf', '\Rockbuzz\LaraCustomValidation\Rules\CPF@passes');
         \Validator::extend('full_name', '\Rockbuzz\LaraCustomValidation\Rules\FullName@passes');
         \Validator::extend('have_numbers', '\Rockbuzz\LaraCustomValidation\Rules\HaveNumbers@passes');
+        \Validator::extend('have_letters', '\Rockbuzz\LaraCustomValidation\Rules\HaveLetters@passes');
         \Validator::extend('have_special_characters', '\Rockbuzz\LaraCustomValidation\Rules\HaveSpecialCharacters@passes');
         \Validator::extend('slug', '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes');
     }
