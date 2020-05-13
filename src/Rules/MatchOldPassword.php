@@ -25,6 +25,6 @@ class MatchOldPassword implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não corresponde a sua senha atual';
+        return 'O campo :attribute não confere';
     }
 }
