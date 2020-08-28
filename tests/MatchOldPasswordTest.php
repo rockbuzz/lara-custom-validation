@@ -34,7 +34,7 @@ class MatchOldPasswordTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não corresponde a sua senha atual',
+            'O campo :attribute não confere',
             $this->matchOldPassword()->message()
         );
     }
