@@ -25,6 +25,6 @@ class FullName implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não contém um nome completo';
+        return trans('validation.full_name');
     }
 }

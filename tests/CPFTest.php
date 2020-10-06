@@ -29,7 +29,7 @@ class CPFTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém um CPF válido',
+            'validation.cpf',
             $this->cpf()->message()
         );
     }

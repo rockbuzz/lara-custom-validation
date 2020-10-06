@@ -16,7 +16,7 @@ class CNPJ implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não contém um CNPJ válido';
+        return trans('validation.cnpj');
     }
 
     private function isValid($value): bool

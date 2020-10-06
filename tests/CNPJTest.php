@@ -29,7 +29,7 @@ class CNPJTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém um CNPJ válido',
+            'validation.cnpj',
             $this->cnpj()->message()
         );
     }

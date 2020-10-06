@@ -29,7 +29,7 @@ class FullNameTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém um nome completo',
+            'validation.full_name',
             $this->fullName()->message()
         );
     }

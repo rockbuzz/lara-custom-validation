@@ -25,6 +25,6 @@ class MatchOldPassword implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não confere';
+        return trans('validation.match_old_password');
     }
 }

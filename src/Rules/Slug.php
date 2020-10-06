@@ -17,6 +17,6 @@ class Slug implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não contém um formato de URI';
+        return trans('validation.slug');
     }
 }

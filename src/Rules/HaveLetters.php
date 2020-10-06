@@ -17,6 +17,6 @@ class HaveLetters implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não contém letras';
+        return trans('validation.have_letters');
     }
 }

@@ -13,8 +13,9 @@ class HaveLettersTest extends TestCase
     public function itShouldFailWhenHaveLettersIsInvalid()
     {
         $this->assertFalse($this->haveLatters()->passes(
-            'haveLatters', '123456#@')
-        );
+            'haveLatters',
+            '123456#@'
+        ));
     }
 
     /**
@@ -23,14 +24,17 @@ class HaveLettersTest extends TestCase
     public function itShouldFailWhenHaveLettersIsValid()
     {
         $this->assertTrue($this->haveLatters()->passes(
-            'haveLatters', 'blablaHbla')
-        );
+            'haveLatters',
+            'blablaHbla'
+        ));
         $this->assertTrue($this->haveLatters()->passes(
-            'haveLatters', 'BLABLABLA')
-        );
+            'haveLatters',
+            'BLABLABLA'
+        ));
         $this->assertTrue($this->haveLatters()->passes(
-            'haveLatters', null)
-        );
+            'haveLatters',
+            null
+        ));
     }
 
     /**
@@ -39,7 +43,7 @@ class HaveLettersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém letras',
+            'validation.have_letters',
             $this->haveLatters()->message()
         );
     }

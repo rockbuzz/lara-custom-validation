@@ -30,7 +30,7 @@ class SlugTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém um formato de URI',
+            'validation.slug',
             $this->slug()->message()
         );
     }

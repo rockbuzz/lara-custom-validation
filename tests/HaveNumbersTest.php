@@ -13,8 +13,9 @@ class HaveNumbersTest extends TestCase
     public function itShouldFailWhenHaveNumbersIsInvalid()
     {
         $this->assertFalse($this->haveNumbers()->passes(
-            'haveNumbers', 'blablabla')
-        );
+            'haveNumbers',
+            'blablabla'
+        ));
     }
 
     /**
@@ -23,14 +24,17 @@ class HaveNumbersTest extends TestCase
     public function itShouldFailWhenHaveNumbersIsValid()
     {
         $this->assertTrue($this->haveNumbers()->passes(
-            'haveNumbers', 'blabla2bla')
-        );
+            'haveNumbers',
+            'blabla2bla'
+        ));
         $this->assertTrue($this->haveNumbers()->passes(
-            'haveNumbers', 'blabla0bla')
-        );
+            'haveNumbers',
+            'blabla0bla'
+        ));
         $this->assertTrue($this->haveNumbers()->passes(
-            'haveNumbers', null)
-        );
+            'haveNumbers',
+            null
+        ));
     }
 
     /**
@@ -39,7 +43,7 @@ class HaveNumbersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém números',
+            'validation.have_numbers',
             $this->haveNumbers()->message()
         );
     }

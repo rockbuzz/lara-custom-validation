@@ -17,6 +17,6 @@ class HaveSpecialCharacters implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não contém caracteres especiais. ex.: @ # $ % & - ? !';
+        return trans('validation.have_special_characters');
     }
 }

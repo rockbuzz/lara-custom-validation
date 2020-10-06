@@ -17,6 +17,6 @@ class HaveNumbers implements Rule
 
     public function message()
     {
-        return 'O campo :attribute não contém números';
+        return trans('validation.have_numbers');
     }
 }

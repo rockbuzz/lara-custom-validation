@@ -13,8 +13,9 @@ class HaveSpecialCharactersTest extends TestCase
     public function itShouldFailWhenHaveSpecialCharactersIsInvalid()
     {
         $this->assertFalse($this->specialCharacters()->passes(
-            'specialCharacters', 'blablabla')
-        );
+            'specialCharacters',
+            'blablabla'
+        ));
     }
 
     /**
@@ -23,23 +24,29 @@ class HaveSpecialCharactersTest extends TestCase
     public function itShouldFailWhenHaveSpecialCharactersIsValid()
     {
         $this->assertTrue($this->specialCharacters()->passes(
-            'specialCharacters', 'blabla!bla')
-        );
+            'specialCharacters',
+            'blabla!bla'
+        ));
         $this->assertTrue($this->specialCharacters()->passes(
-            'specialCharacters', 'blabla@bla')
-        );
+            'specialCharacters',
+            'blabla@bla'
+        ));
         $this->assertTrue($this->specialCharacters()->passes(
-            'specialCharacters', 'blabla#bla')
-        );
+            'specialCharacters',
+            'blabla#bla'
+        ));
         $this->assertTrue($this->specialCharacters()->passes(
-            'specialCharacters', 'blabla%bla')
-        );
+            'specialCharacters',
+            'blabla%bla'
+        ));
         $this->assertTrue($this->specialCharacters()->passes(
-            'specialCharacters', 'blabla~bla')
-        );
+            'specialCharacters',
+            'blabla~bla'
+        ));
         $this->assertTrue($this->specialCharacters()->passes(
-            'specialCharacters', null)
-        );
+            'specialCharacters',
+            null
+        ));
     }
 
     /**
@@ -48,7 +55,7 @@ class HaveSpecialCharactersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'O campo :attribute não contém caracteres especiais. ex.: @ # $ % & - ? !',
+            'validation.have_special_characters',
             $this->specialCharacters()->message()
         );
     }
