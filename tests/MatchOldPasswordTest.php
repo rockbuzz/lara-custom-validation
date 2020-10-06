@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Tests\Models\User;
+use Tests\Stubs\User;
 use Rockbuzz\LaraCustomValidation\Rules\MatchOldPassword;
 
 class MatchOldPasswordTest extends TestCase
