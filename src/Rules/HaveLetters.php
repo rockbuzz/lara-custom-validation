@@ -17,6 +17,6 @@ class HaveLetters implements Rule
 
     public function message()
     {
-        return trans('validation.have_letters');
+        return trans('custom-val::messages.have_letters');
     }
 }

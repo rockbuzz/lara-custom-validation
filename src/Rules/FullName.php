@@ -25,6 +25,6 @@ class FullName implements Rule
 
     public function message()
     {
-        return trans('validation.full_name');
+        return trans('custom-val::messages.full_name');
     }
 }

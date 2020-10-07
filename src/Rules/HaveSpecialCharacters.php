@@ -17,6 +17,6 @@ class HaveSpecialCharacters implements Rule
 
     public function message()
     {
-        return trans('validation.have_special_characters');
+        return trans('custom-val::messages.have_special_characters');
     }
 }

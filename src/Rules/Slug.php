@@ -17,6 +17,6 @@ class Slug implements Rule
 
     public function message()
     {
-        return trans('validation.slug');
+        return trans('custom-val::messages.slug');
     }
 }
