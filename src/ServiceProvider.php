@@ -21,10 +21,10 @@ class ServiceProvider extends SupportServiceProvider
         Validator::extend('slug', '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes');
         Validator::extend('match_old_password', '\Rockbuzz\LaraCustomValidation\Rules\MatchOldPassword@passes');
 
-        $this->loadTranslationsFrom(__DIR__.'/translations', 'custom-val');
+        $this->loadTranslationsFrom(__DIR__.'/lang', 'custom-val');
 
         $this->publishes([
-            __DIR__.'/translations' => resource_path('lang/vendor/custom-val'),
+            __DIR__.'/lang' => resource_path('lang/vendor/custom-val'),
         ], 'lang');
     }
 
