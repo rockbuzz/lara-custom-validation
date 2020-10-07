@@ -17,6 +17,6 @@ class HaveNumbers implements Rule
 
     public function message()
     {
-        return trans('custom-val::messages.have_numbers');
+        return trans('customValidation::messages.have_numbers');
     }
 }

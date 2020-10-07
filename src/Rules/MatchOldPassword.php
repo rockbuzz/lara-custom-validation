@@ -25,6 +25,6 @@ class MatchOldPassword implements Rule
 
     public function message()
     {
-        return trans('custom-val::messages.match_old_password');
+        return trans('customValidation::messages.match_old_password');
     }
 }

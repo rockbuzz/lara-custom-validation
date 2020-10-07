@@ -16,7 +16,7 @@ class CNPJ implements Rule
 
     public function message()
     {
-        return trans('custom-val::messages.cnpj');
+        return trans('customValidation::messages.cnpj');
     }
 
     private function isValid($value): bool

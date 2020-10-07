@@ -18,7 +18,7 @@ class CPF implements Rule
 
     public function message()
     {
-        return trans('custom-val::messages.cpf');
+        return trans('customValidation::messages.cpf');
     }
 
     private function isValid($value): bool
