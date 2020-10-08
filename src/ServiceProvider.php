@@ -9,7 +9,11 @@ class ServiceProvider extends SupportServiceProvider
 {
     public function boot()
     {
-        Validator::extend('cnpj', '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes', '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@message');
+        Validator::extend(
+            'cnpj', 
+            '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes', 
+            trans('customValidation::messages.cnpj')
+        );
         Validator::extend('cpf', '\Rockbuzz\LaraCustomValidation\Rules\CPF@passes');
         Validator::extend('full_name', '\Rockbuzz\LaraCustomValidation\Rules\FullName@passes');
         Validator::extend('have_numbers', '\Rockbuzz\LaraCustomValidation\Rules\HaveNumbers@passes');
