@@ -11,8 +11,7 @@ class ServiceProvider extends SupportServiceProvider
     {
         Validator::extend(
             'cnpj', 
-            '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes', 
-            trans('customValidation::messages.cnpj')
+            '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes'
         );
         Validator::extend('cpf', '\Rockbuzz\LaraCustomValidation\Rules\CPF@passes');
         Validator::extend('full_name', '\Rockbuzz\LaraCustomValidation\Rules\FullName@passes');
