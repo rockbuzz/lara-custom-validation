@@ -142,7 +142,7 @@ public function rules()
 }
 ```
 
-### in extension mode it is necessary to add messages to the validation file for the language
+### In extension mode it is necessary to add messages to the validation file for the language
 ```php
 //resources/lang/pt-br/validation.php
 return [
