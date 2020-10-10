@@ -29,7 +29,7 @@ class FullNameTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.full_name',
+            'customValidation::messages.full_name',
             $this->fullName()->message()
         );
     }

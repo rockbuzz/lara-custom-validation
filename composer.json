@@ -1,7 +1,7 @@
 {
   "name": "rockbuzz/lara-custom-validation",
-  "description": "Extra validations",
-  "keywords": [],
+  "description": "Laravel custom validations",
+  "keywords": ["laravel", "validation", "custom validation"],
   "license": "MIT",
   "authors": [
     {
@@ -24,11 +24,11 @@
     }
   },
   "require": {
-    "php": ">=7.1"
+    "php": ">=7.2"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7.0",
-    "orchestra/testbench": "^3.7",
+    "phpunit/phpunit": "^8.0",
+    "orchestra/testbench": "^4.0",
     "squizlabs/php_codesniffer": "^3.2"
   },
   "scripts": {

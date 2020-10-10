@@ -34,7 +34,7 @@ class MatchOldPasswordTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.match_old_password',
+            'customValidation::messages.match_old_password',
             $this->matchOldPassword()->message()
         );
     }

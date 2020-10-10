@@ -43,7 +43,7 @@ class HaveLettersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.have_letters',
+            'customValidation::messages.have_letters',
             $this->haveLatters()->message()
         );
     }

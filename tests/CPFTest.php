@@ -29,7 +29,7 @@ class CPFTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.cpf',
+            'customValidation::messages.cpf',
             $this->cpf()->message()
         );
     }

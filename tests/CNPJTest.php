@@ -29,7 +29,7 @@ class CNPJTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.cnpj',
+            'customValidation::messages.cnpj',
             $this->cnpj()->message()
         );
     }

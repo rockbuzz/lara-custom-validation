@@ -55,7 +55,7 @@ class HaveSpecialCharactersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.have_special_characters',
+            'customValidation::messages.have_special_characters',
             $this->specialCharacters()->message()
         );
     }

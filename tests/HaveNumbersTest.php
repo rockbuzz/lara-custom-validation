@@ -43,7 +43,7 @@ class HaveNumbersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.have_numbers',
+            'customValidation::messages.have_numbers',
             $this->haveNumbers()->message()
         );
     }

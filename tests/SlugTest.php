@@ -30,7 +30,7 @@ class SlugTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'validation.slug',
+            'customValidation::messages.slug',
             $this->slug()->message()
         );
     }
