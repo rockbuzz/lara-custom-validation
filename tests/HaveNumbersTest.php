@@ -43,7 +43,14 @@ class HaveNumbersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.have_numbers',
+            'The :attribute must contain numbers',
+            $this->haveNumbers()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute deve conter números',
             $this->haveNumbers()->message()
         );
     }

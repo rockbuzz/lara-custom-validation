@@ -43,7 +43,14 @@ class HaveLettersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.have_letters',
+            'The :attribute must contain letters',
+            $this->haveLatters()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute deve conter letras',
             $this->haveLatters()->message()
         );
     }

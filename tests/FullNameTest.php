@@ -29,7 +29,14 @@ class FullNameTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.full_name',
+            'The :attribute must be a full name',
+            $this->fullName()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute deve ser um nome completo',
             $this->fullName()->message()
         );
     }

@@ -12,7 +12,7 @@ class HaveSpecialCharactersTest extends TestCase
      */
     public function itShouldFailWhenHaveSpecialCharactersIsInvalid()
     {
-        $this->assertFalse($this->specialCharacters()->passes(
+        $this->assertFalse($this->haveSpecialCharacters()->passes(
             'specialCharacters',
             'blablabla'
         ));
@@ -23,27 +23,27 @@ class HaveSpecialCharactersTest extends TestCase
      */
     public function itShouldFailWhenHaveSpecialCharactersIsValid()
     {
-        $this->assertTrue($this->specialCharacters()->passes(
+        $this->assertTrue($this->haveSpecialCharacters()->passes(
             'specialCharacters',
             'blabla!bla'
         ));
-        $this->assertTrue($this->specialCharacters()->passes(
+        $this->assertTrue($this->haveSpecialCharacters()->passes(
             'specialCharacters',
             'blabla@bla'
         ));
-        $this->assertTrue($this->specialCharacters()->passes(
+        $this->assertTrue($this->haveSpecialCharacters()->passes(
             'specialCharacters',
             'blabla#bla'
         ));
-        $this->assertTrue($this->specialCharacters()->passes(
+        $this->assertTrue($this->haveSpecialCharacters()->passes(
             'specialCharacters',
             'blabla%bla'
         ));
-        $this->assertTrue($this->specialCharacters()->passes(
+        $this->assertTrue($this->haveSpecialCharacters()->passes(
             'specialCharacters',
             'blabla~bla'
         ));
-        $this->assertTrue($this->specialCharacters()->passes(
+        $this->assertTrue($this->haveSpecialCharacters()->passes(
             'specialCharacters',
             null
         ));
@@ -55,12 +55,19 @@ class HaveSpecialCharactersTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.have_special_characters',
-            $this->specialCharacters()->message()
+            'The :attribute must contain special characters. @ # $ % & - ? !',
+            $this->haveSpecialCharacters()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute deve conter caracteres especiais. @ # $ % & - ? !',
+            $this->haveSpecialCharacters()->message()
         );
     }
 
-    protected function specialCharacters()
+    protected function haveSpecialCharacters()
     {
         return new HaveSpecialCharacters();
     }

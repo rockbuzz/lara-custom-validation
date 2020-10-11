@@ -29,7 +29,14 @@ class CPFTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.cpf',
+            'The :attribute must be a valid CPF',
+            $this->cpf()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute deve ser um CPF válido',
             $this->cpf()->message()
         );
     }

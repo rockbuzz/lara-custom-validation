@@ -29,7 +29,14 @@ class CNPJTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.cnpj',
+            'The :attribute must be a valid CNPJ',
+            $this->cnpj()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute deve ser um CNPJ válido',
             $this->cnpj()->message()
         );
     }

@@ -34,7 +34,14 @@ class MatchOldPasswordTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.match_old_password',
+            'The :attribute does not match',
+            $this->matchOldPassword()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute não corresponde',
             $this->matchOldPassword()->message()
         );
     }

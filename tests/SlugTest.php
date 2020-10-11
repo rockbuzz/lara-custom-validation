@@ -30,7 +30,14 @@ class SlugTest extends TestCase
     public function itShouldReturnMessage()
     {
         $this->assertEquals(
-            'customValidation::messages.slug',
+            'The :attribute must contain a valid URI',
+            $this->slug()->message()
+        );
+
+        app()->setLocale('pt-br');
+
+        $this->assertEquals(
+            'O :attribute deve conter uma URI válida',
             $this->slug()->message()
         );
     }
