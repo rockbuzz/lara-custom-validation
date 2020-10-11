@@ -9,9 +9,14 @@ class ServiceProvider extends SupportServiceProvider
 {
     public function boot()
     {
+        $this->loadTranslationsFrom(__DIR__.'/lang', 'customValidation');
+
+        $cnpjMessage = $this->app->translator->get('customValidation::messages.cnpj');
+
         Validator::extend(
             'cnpj',
-            '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes',
+            $cnpjMessage
         );
         Validator::extend(
             'cpf',
@@ -41,8 +46,6 @@ class ServiceProvider extends SupportServiceProvider
             'slug',
             '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes'
         );
-
-        $this->loadTranslationsFrom(__DIR__.'/lang/vendor', 'customValidation');
 
         $this->publishes([
             __DIR__.'/lang' => resource_path('lang/vendor/customValidation'),
