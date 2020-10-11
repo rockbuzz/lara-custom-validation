@@ -20,7 +20,8 @@ class ServiceProvider extends SupportServiceProvider
         );
         Validator::extend(
             'cpf',
-            '\Rockbuzz\LaraCustomValidation\Rules\CPF@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\CPF@passes',
+            trans('customValidation::messages.cpf')
         );
         Validator::extend(
             'full_name',
