@@ -11,12 +11,10 @@ class ServiceProvider extends SupportServiceProvider
     {
         $this->loadTranslationsFrom(__DIR__.'/lang', 'customValidation');
 
-        $cnpjMessage = $this->app->translator->get('customValidation::messages.cnpj');
-
         Validator::extend(
             'cnpj',
             '\Rockbuzz\LaraCustomValidation\Rules\CNPJ@passes',
-            $cnpjMessage
+            trans('customValidation::messages.cnpj')
         );
         Validator::extend(
             'cpf',
@@ -25,27 +23,33 @@ class ServiceProvider extends SupportServiceProvider
         );
         Validator::extend(
             'full_name',
-            '\Rockbuzz\LaraCustomValidation\Rules\FullName@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\FullName@passes',
+            trans('customValidation::messages.full_name')
         );
         Validator::extend(
             'have_numbers',
-            '\Rockbuzz\LaraCustomValidation\Rules\HaveNumbers@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\HaveNumbers@passes',
+            trans('customValidation::messages.have_numbers')
         );
         Validator::extend(
             'have_letters',
-            '\Rockbuzz\LaraCustomValidation\Rules\HaveLetters@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\HaveLetters@passes',
+            trans('customValidation::messages.have_letters')
         );
         Validator::extend(
             'have_special_characters',
-            '\Rockbuzz\LaraCustomValidation\Rules\HaveSpecialCharacters@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\HaveSpecialCharacters@passes',
+            trans('customValidation::messages.have_special_characters')
         );
         Validator::extend(
             'match_old_password',
-            '\Rockbuzz\LaraCustomValidation\Rules\MatchOldPassword@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\MatchOldPassword@passes',
+            trans('customValidation::messages.match_old_password')
         );
         Validator::extend(
             'slug',
-            '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes'
+            '\Rockbuzz\LaraCustomValidation\Rules\Slug@passes',
+            trans('customValidation::messages.slug')
         );
 
         $this->publishes([
