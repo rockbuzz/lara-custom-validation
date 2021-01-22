@@ -2,11 +2,12 @@
 
 Laravel custom validations
 
-[![Build Status](https://travis-ci.org/rockbuzz/lara-custom-validation.svg?branch=master)](https://travis-ci.org/rockbuzz/lara-custom-validation)
+<p><img src="https://github.com/rockbuzz/lara-custom-validation/workflows/Main/badge.svg"/></p>
+
 
 ## Requirements
 
-- PHP ^7.2
+- PHP >= 7.2.5
 - Laravel 6+
 
 ## Install

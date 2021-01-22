@@ -9,14 +9,18 @@ class MatchOldPassword implements Rule
 {
     private $user;
 
-    public function __construct($user = null)
+    private $nullable;
+
+    public function __construct($user = null, bool $nullable = false)
     {
         $this->user = $user ?: auth()->user();
+
+        $this->nullable = $nullable;
     }
 
     public function passes($attribute, $value): bool
     {
-        if ($value === null) {
+        if ($value === null && $this->nullable) {
             return true;
         }
         

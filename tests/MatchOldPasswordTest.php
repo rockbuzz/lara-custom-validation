@@ -15,7 +15,7 @@ class MatchOldPasswordTest extends TestCase
     {
         $user = new User('12345678');
 
-        $this->assertFalse($this->matchOldPassword($user)->passes('slug', 'any_password'));
+        $this->assertFalse($this->matchOldPassword($user)->passes('password', 'any_password'));
     }
 
     /**
@@ -25,7 +25,29 @@ class MatchOldPasswordTest extends TestCase
     {
         $user = new User('12345678');
 
-        $this->assertTrue($this->matchOldPassword($user)->passes('slug', '12345678'));
+        $this->assertTrue($this->matchOldPassword($user)->passes('password', '12345678'));
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldFailWhenValueIsNullAndNullablePropertyIsFalse()
+    {
+        $user = new User('12345678');
+
+        $this->assertFalse($this->matchOldPassword($user)->passes('password', null));
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldSuccessWhenValueIsNullAndNullablePropertyIsTrue()
+    {
+        $user = new User('12345678');
+
+        $match = new MatchOldPassword($user, $nullable = true);
+
+        $this->assertTrue($match->passes('password', null));
     }
 
     /**
