@@ -107,6 +107,8 @@ public function rules()
 
 ### `MatchOldPassword`
 
+You can optionally pass two parameters in the constructor, the first is $ nullable which by default is false and the $user who by default is auth.
+
 ```php
 use Rockbuzz\LaraCustomValidation\Rules\MatchOldPassword;
 
