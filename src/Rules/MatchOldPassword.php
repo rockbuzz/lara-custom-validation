@@ -12,7 +12,7 @@ class MatchOldPassword implements Rule
 
     public function __construct(bool $nullable = false, $user = null)
     {
-        $this->nullable = $nullable;        
+        $this->nullable = $nullable;
         $this->user = $user ?: auth()->user();
     }
 
