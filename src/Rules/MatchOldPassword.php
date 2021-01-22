@@ -7,15 +7,13 @@ use Illuminate\Contracts\Validation\Rule;
 
 class MatchOldPassword implements Rule
 {
+    private $nullable;
     private $user;
 
-    private $nullable;
-
-    public function __construct($user = null, bool $nullable = false)
+    public function __construct(bool $nullable = false, $user = null)
     {
+        $this->nullable = $nullable;        
         $this->user = $user ?: auth()->user();
-
-        $this->nullable = $nullable;
     }
 
     public function passes($attribute, $value): bool

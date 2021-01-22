@@ -45,7 +45,7 @@ class MatchOldPasswordTest extends TestCase
     {
         $user = new User('12345678');
 
-        $match = new MatchOldPassword($user, $nullable = true);
+        $match = new MatchOldPassword($nullable = true, $user);
 
         $this->assertTrue($match->passes('password', null));
     }
@@ -70,6 +70,6 @@ class MatchOldPasswordTest extends TestCase
 
     protected function matchOldPassword($user = null)
     {
-        return new MatchOldPassword($user);
+        return new MatchOldPassword($nullable = false, $user);
     }
 }
