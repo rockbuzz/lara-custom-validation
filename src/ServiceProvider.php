@@ -37,6 +37,16 @@ class ServiceProvider extends SupportServiceProvider
             trans('customValidation::messages.have_letters')
         );
         Validator::extend(
+            'have_uppercases',
+            '\Rockbuzz\LaraCustomValidation\Rules\HaveUppercases@passes',
+            trans('customValidation::messages.have_uppercases')
+        );
+        Validator::extend(
+            'have_lowercases',
+            '\Rockbuzz\LaraCustomValidation\Rules\HaveLowercases@passes',
+            trans('customValidation::messages.have_lowercases')
+        );
+        Validator::extend(
             'have_special_characters',
             '\Rockbuzz\LaraCustomValidation\Rules\HaveSpecialCharacters@passes',
             trans('customValidation::messages.have_special_characters')
